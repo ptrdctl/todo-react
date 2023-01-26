@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TaskWrapper = styled.section`
+export const TaskWrapper = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 2rem;
@@ -13,3 +13,4 @@ export const TaskText = styled.p`
   font-size: 2rem;
   text-align: center;
 `;
+

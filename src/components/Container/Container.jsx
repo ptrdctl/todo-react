@@ -6,4 +6,4 @@ export const Container = ({children}) => {
       {children}
     </StyledContainer>
   )
-}
+};
