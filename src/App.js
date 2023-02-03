@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { Title } from './components/Title/Title';
 import { List } from './components/List/List';
-import { Container } from './components/Container/Container';
 import { Control } from './components/Control/Control';
+import { StyledContainer } from './App.styles';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -11,16 +11,16 @@ function App() {
   const addTodo = (text) => {
     const id = nanoid();
     const newTask = { id, text };
-    setTasks([...tasks, newTask]);
+    setTasks((prevTasks) => [...prevTasks, newTask]);
   };
 
   return (
     <div className="App">
-      <Container>
+      <StyledContainer>
         <Title />
         <Control addTodo={addTodo} />
         <List tasks={tasks} />
-      </Container>
+      </StyledContainer>
     </div>
   );
 }
